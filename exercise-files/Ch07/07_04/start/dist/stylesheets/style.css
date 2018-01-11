@@ -1,0 +1,109 @@
+html, body {
+    font-family: "Architects Daughter", sans-serif;
+    min-width: 100%;
+    margin: 0;
+}
+
+
+.app {
+    position: relative;
+    display: flex;
+}
+
+
+.home {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home > nav {
+    display: flex;
+    background-color: #0C3B20;
+    line-height: 4em;
+    flex-direction: row;
+    min-width: 100%;
+}
+
+.home > nav > a {
+    flex-basis: calc(33.33% - 3em);
+    flex-grow: 1;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: center;
+}
+
+#homebox {
+    color: #E1F5F5;
+    text-shadow: 5px -5px #0C3B20;
+    font-family: "Architects Daughter", sans-serif;
+    font-size: 4em;
+    display: flex;
+    min-width: 100%;
+    min-height: 1000px;
+    background-image: url(https://c4.staticflickr.com/3/2851/10764957835_4ba6354087_k.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.page>nav {
+    display: flex;
+    background-color: #0C3B20;
+    line-height: 4em;
+    flex-direction: column;
+}
+
+.page > nav > a {
+    color: white;
+    text-decoration: none;
+    padding-left: 0.5em;
+}
+
+.member-list {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 90%;
+    align-content: space-around;
+}
+
+.member-list > h1, .member-list > span {
+    min-width: 100%;
+    padding-bottom: 1em;
+}
+
+.member {
+    flex-direction: row;
+    flex-basis: calc(33.33% - 3em);
+    flex-grow: 1;
+}
+
+.member > h1:first-of-type {
+    font-weight: 100;
+    flex-basis: 100%;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.about > p {
+    font-size: 1.3em;
+}
+
+.page {
+    display: flex;
+    flex-grow: 1;
+}
+
+.page > div {
+    margin: 0.5em;
+}
+
+.member > a {
+    font-variant: small-caps;
+    position: relative;
+    left: 75%;
+    text-decoration: underline;
+}
