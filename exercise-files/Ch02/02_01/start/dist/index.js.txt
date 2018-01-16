@@ -1,3 +1,5 @@
+// non-declarative
+
 // create first react element
 // createElement takes 3 arguments (tag, element properties, child content)
 const title = React.createElement(
@@ -12,3 +14,6 @@ ReactDOM.render(
 	title,
 	document.getElementById('react-container')
 )
+
+// from the command prompt in the \start folder:
+// httpster -d ./dist -p 3000
