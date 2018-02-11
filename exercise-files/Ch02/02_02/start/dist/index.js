@@ -1,12 +1,6 @@
 const { render } = ReactDOM
 
 
-const style = {
-	backgroundColor: 'orange',
-	color: 'white',
-	fontFamily: 'verdana'
-}
-
 // using inline style instead of a style element
 // nest the style object in a JSX expression
 render(
