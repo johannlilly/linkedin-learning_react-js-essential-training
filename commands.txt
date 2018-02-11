@@ -1,0 +1,45 @@
+npm init
+
+## Webpack 1
+
+npm install babel-cli@6.18.0 --save-dev
+npm install babel-preset-react@6.16.0 --save-dev
+npm install babel-preset-latest@6.16.0 --save-dev
+npm install babel-preset-stage-0@6.16.0 --save-dev
+npm install webpack@1.13.3 --save-dev
+npm install babel-loader@6.2.5 --save-dev
+npm install webpack-dev-server@1.16.2 --save-dev
+
+sudo npm install -g webpack@1.13.3
+OR
+./node_modules/.bin/webpack
+
+npm install react@15.3.2 --save
+npm install react-dom@15.3.2 --save
+npm install json-loader@0.5.4 --save-dev
+npm install autoprefixer-loader@3.2.0 --save-dev
+npm install css-loader@0.25.0 --save-dev
+npm install sass-loader@4.0.2 --save-dev
+npm install node-sass@4.7.2 --save-dev
+npm install style-loader@0.13.1 --save-dev
+
+## Webpack 3
+
+npm install webpack@3.1.0 --save-dev
+npm install babel-core@6.25.0 --save-dev
+npm install babel-loader@7.1.1 --save-dev
+npm install babel-preset-env@1.6.0 --save-dev
+npm install babel-preset-react@6.24.1 --save-dev
+
+npm install react@15.3.2 --save
+npm install react-dom@15.3.2 --save
+npm install json-loader@0.5.4 --save-dev
+npm install autoprefixer-loader@3.2.0 --save-dev
+npm install css-loader@0.25.0 --save-dev
+npm install sass-loader@4.0.2 --save-dev
+npm install node-sass@4.7.2 --save-dev
+npm install style-loader@0.13.1 --save-dev
+
+webpack
+
+npm start
