@@ -1,0 +1,8 @@
+/* use webpack to transpile SCSS */
+$bg-color: turquoise;
+$text-color: indigo;
+
+.goodbye {
+	background-color: $bg-color;
+	color: $text-color;
+}
