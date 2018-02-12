@@ -26,6 +26,7 @@ npm install style-loader@0.13.1 --save-dev
 ## Webpack 3
 
 npm install webpack@3.1.0 --save-dev
+npm install webpack-dev-server@2.11.1 --save-dev
 npm install babel-core@6.25.0 --save-dev
 npm install babel-loader@7.1.1 --save-dev
 npm install babel-preset-env@1.6.0 --save-dev
