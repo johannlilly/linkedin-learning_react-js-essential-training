@@ -1,13 +1,20 @@
 import React from 'react'
 import '../stylesheets/ui.scss'
 
-export const SkiDayCount = React.createClass({
+// import React from 'react'
+// instead of importing React, we can be very declarative
+// import { Component } from 'react'
+
+// export const SkiDayCount = React.createClass({
+// use class syntax instead
+// can remove commas between methods
+export class SkiDayCount extends Component{
 	percentToDecimal(decimal) {
 		return ((decimal * 100) + '%')
-	},
+	}
 	calcGoalProgress(total, goal) {
 		return this.percentToDecimal(total/goal)
-	},
+	}
 	render() {
 		return (
 			<div className="ski-day-count">
@@ -34,4 +41,4 @@ export const SkiDayCount = React.createClass({
 			</div>
 		)
 	}
-})
+}
