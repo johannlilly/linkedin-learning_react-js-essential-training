@@ -1,9 +1,12 @@
-import { Component } from 'react'
+/// import { Component } from 'react'
+// we're no longer using Component from React
 import '../stylesheets/ui.scss'
 
 // Stateless functional components
 // a third way to create components is by using a function
 // it takes property information and returns JSX elements
+// typically, use stateless components whenever possible
+
 
 ///	const MyComponent = (props) => (
 ///		<div>{props.title}</div>
