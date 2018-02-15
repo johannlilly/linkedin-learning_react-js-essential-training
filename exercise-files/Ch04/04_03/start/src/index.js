@@ -1,17 +1,14 @@
 import React from 'react'
 import { render } from 'react-dom'
 import './stylesheets/ui.scss'
-import { SkiDayCount } from './components/SkiDayCount-createClass'
+import { SkiDayCount } from './components/SkiDayCount-ES6'
 
 window.React = React
-
 
 render(
 	<SkiDayCount />, 
 	document.getElementById('react-container')
 )
-
-
 
 // render(
 // 	<SkiDayList days={
