@@ -40,4 +40,10 @@ export const SkiDayCount = ({total=70, powder=20,
 		</div>
 )
 
+SkiDayCount.defaultProps = {
+  total: 50,
+  powder: 10,
+  backcountry: 15,
+  goal: 75
+}
 
