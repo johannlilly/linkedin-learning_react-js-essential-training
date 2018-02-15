@@ -1,13 +1,14 @@
 import React from 'react'
 import { render } from 'react-dom'
 import './stylesheets/ui.scss'
-import { SkiDayCount } from './components/SkiDayCount'
+import { SkiDayCount } from './components/SkiDayCount-createClass'
 
 window.React = React
 
-
+// start by rendering a property with an incorrect value
+// will render with warning
 render(
-	<SkiDayCount />, 
+	<SkiDayCount total="lots" />, 
 	document.getElementById('react-container')
 )
 
