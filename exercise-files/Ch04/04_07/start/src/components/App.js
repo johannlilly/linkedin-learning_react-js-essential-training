@@ -27,14 +27,29 @@ export const App = createClass({
 		]
 		}
 	},
+	countDays(filter) {
+		return this.state.allSkiDays.filter(function() {
+			// callback function to filter method
+			// filters based on filter passed to countDays()
+			if(filter) {
+				return day[filter]
+			} else {
+				return day
+			}
+		}).length
+	},
 	render() {
 		return (
 			<div className="app">
 				<SkiDayList days={this.state.allSkiDays}/>
 				<SkiDayCount
-					total={}
-					powder={}
-					backcountry={}
+					total={this.countDays()}
+					powder={this.countDays(
+						"powder"
+					)}
+					backcountry={this.countDays(
+						"backcountry"
+					)}
 				/>
 			</div>
 		)
