@@ -19,6 +19,6 @@ render(
 
 
 render(
-	<SkiDayList days="lots of days"/>,
+	<SkiDayList days="[]"/>,
 	document.getElementById('react-container')
 )
