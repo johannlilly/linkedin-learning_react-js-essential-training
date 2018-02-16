@@ -1,4 +1,6 @@
 import { createClass } from 'react'
+import { SkiDayList } from './SkiDayList'
+import { SkiDayCount } from './SkiDayCount'
 
 export const App = createClass({
 	getInitialState() {
@@ -28,7 +30,12 @@ export const App = createClass({
 	render() {
 		return (
 			<div className="app">
-				{this.state.allSkiDays[0]["resort"]}
+				<SkiDayList days={this.state.allSkiDays}/>
+				<SkiDayCount
+					total={}
+					powder={}
+					backcountry={}
+				/>
 			</div>
 		)
 	}
