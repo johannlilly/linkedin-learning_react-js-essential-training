@@ -1,19 +1,26 @@
-import { PropTypes, Component } from 'react'
-
+import { PropTypes } from 'react'
+// because we are using onNewDay, we need to add this as a property of the AddDayForm
 export const AddDayForm = ({ resort, 
 							 date, 
 							 powder, 
-							 backcountry }) => {
+							 backcountry,
+							 onNewDay }) => {
 	
 	let _resort, _date, _powder, _backcountry
 	
 	const submit = (e) => {
 		e.preventDefault()
-		console.log('resort', _resort.value)
-		console.log('date', _date.value)
-		console.log('powder', _powder.checked)
-		console.log('backcountry', _backcountry.checked)
-
+		onNewDay({
+			resort: _resort.value,
+			date: _date.value,
+			powder: _powder.checked,
+			backcountry: _backcountry.checked
+		})
+		// reset form values to empty strings on submit
+		_resort.value = '',
+		_date.value = '',
+		_powder.checked = false,
+		_backcountry.checked = false
 	}
 
 	return (
