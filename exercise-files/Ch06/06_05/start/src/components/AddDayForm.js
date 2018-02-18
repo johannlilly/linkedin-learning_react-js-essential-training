@@ -1,4 +1,4 @@
-import { PropTypes } from 'react'
+import { PropTypes, Component } from 'react'
 
 const tahoeResorts = [
 	"Alpine Meadows",
@@ -13,6 +13,33 @@ const tahoeResorts = [
 	"Squaw Valley",
 	"Sugar Bowl"
 ]
+
+class Autocomplete extends Component {
+	// get() grabs the value of whatever our ref is
+	get value() {
+		return this.refs.inputResort.value
+	}
+	// set the value of the ref to whatever the input value is
+	set value() {
+		this.refs.inputResort.value = inputValue
+	}
+
+	render () {
+		return (
+			<div>
+				<input ref="inputResort" type="text" list="tahoe-resorts" />
+				{/* ID of datalist matches the input */}
+				<datalist id="tahoe-resorts">
+					{this.props.option.map(
+						(opt, i) =>
+							// we get this option with a ref in <input/> and a get() method
+							<option key={i}>{opt}</option>
+					)}
+				</datalist>
+			</div>
+		)
+	}
+}
 
 export const AddDayForm = ({ resort, 
 							 date, 
