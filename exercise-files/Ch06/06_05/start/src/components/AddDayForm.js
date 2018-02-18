@@ -68,11 +68,8 @@ export const AddDayForm = ({ resort,
 		<form onSubmit={submit} className="add-day-form">
 
 			<label htmlFor="resort">Resort Name</label>
-			<input id="resort" 
-				   type="text" 
-				   required 
-				   defaultValue={resort}
-				   ref={input => _resort = input}/>
+			<Autocomplete options={tahoeResorts}
+				   ref={input => _resort = input} />
 
 			<label htmlFor="date">Date</label>
 			<input id="date" 
