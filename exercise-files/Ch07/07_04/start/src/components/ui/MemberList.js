@@ -8,8 +8,12 @@ class MemberList extends Component {
         super(props)
         this.state = {
             members: [],
-            loading: false
+            loading: false,
+            // add updating lifecycle methods
+            administrators: []
         }
+        this.makeAdmin = this.makeAdmin.bind(this)
+        this.removeAdmin = this.removeAdmin.bind(this)
     }
 
     componentDidMount() {
@@ -21,6 +25,24 @@ class MemberList extends Component {
                 members,
                 loading: false
             }))
+    }
+
+    // what happens when you click the makeAdmin button for someone not an administrator
+    makeAdmin(email) {
+        const administrators = [
+            ...this.state.administrators,
+            email
+        ]
+        // take the value and use it to set state
+        this.setState({administrators})
+    }
+
+    removeAdmin(email) {
+        // check if email matches the email we want to remove
+        const administrators = this.state.administrators.filter(
+            adminEmail => adminEmail !== email
+        )
+        this.setState({administrators})
     }
 
     render() {
@@ -38,9 +60,15 @@ class MemberList extends Component {
                    members.map(
                 	(member, i) => 
                 		<Member key={i} 
+                                //some() makes sure we have a match
+                                admin={this.state.administrators.some(
+                                    adminEmail => adminEmail === member.email
+                                    )}
                                 name={member.name.first + ' ' + member.name.last} 
                                 email={member.email}
-                                thumbnail={member.picture.thumbnail}/>
+                                thumbnail={member.picture.thumbnail}
+                                makeAdmin={this.makeAdmin}
+                                removeAdmin={this.removeAdmin}/>
                 	 ):
                    <span>Currently 0 Members </span>
                }
