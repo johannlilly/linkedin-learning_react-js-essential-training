@@ -20,7 +20,7 @@ class Autocomplete extends Component {
 		return this.refs.inputResort.value
 	}
 	// set the value of the ref to whatever the input value is
-	set value() {
+	set value(inputValue) {
 		this.refs.inputResort.value = inputValue
 	}
 
