@@ -28,12 +28,16 @@ class MemberList extends Component {
     }
     // take the data in MemberList and render a Member for each member held in state
     render() {
+        // destructure members from state so syntax will be cleaner
+        const { members } = this.state
+        // send data as props to each member
         return (
             <div className="member-list">
             	<h1>Society Members</h1>
-                {member.map((member, i) =>
+                {member.map((data, i) =>
                     <Member key={i}
-                               {...member}/>   
+                            onClick={email => console.log(email)}
+                               {...data}/>   
                     )}
             </div>
         )    
